@@ -37,11 +37,16 @@ header{
     flex-wrap: wrap;
 }
 
+.nav-li:hover{
+    border-bottom: 3px solid #F08910;
+}
+
 #desconectar{
     display: block;
     margin-top: 8px;
     text-align: right;
     text-decoration: underline;
+    color: #F08910;
     
 }
 
