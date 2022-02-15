@@ -30,7 +30,7 @@ header{
 
 }
 
-.conteiner-usario{
+#conteiner-usario{
     display: flex;
     align-items: center;
     gap: 10px;
@@ -113,8 +113,8 @@ footer{
     #menu-list{
         display: block;
         position: relative;
-        top: 200px;
-        left: 150px;
+        top: 150px;
+        left: 320px;
         overflow: hidden;
         
     }
@@ -132,5 +132,70 @@ footer{
 
     .nav-li{
         display: block;
+    }
+}
+
+
+@media (max-width: 650px){
+    #menu-list{
+        display: block;
+        position: relative;
+        top: 150px;
+        left: 240px;
+        overflow: hidden;
+        
+    }
+
+    #conteiner-usario{
+        position: relative;
+        top: 60px;
+        left: 50px;
+        overflow: hidden;
+       
+    }
+}
+
+
+@media (max-width: 570px){
+    #menu-list{
+        display: block;
+        position: relative;
+        top: 150px;
+        left: 200px;
+        overflow: hidden;
+        
+    }
+
+    #conteiner-usario{
+        position: relative;
+        top: 60px;
+        left: 30px;
+        overflow: hidden;
+       
+    }
+}
+
+@media (max-width: 485px){
+    #menu-list{
+        display: block;
+        position: relative;
+        top: 150px;
+        left: 160px;
+        overflow: hidden;
+        
+    }
+
+    #conteiner-usario{
+        position: relative;
+        top: 60px;
+        left: 0px;
+        overflow: hidden;
+       
+    }
+
+    .logo{
+        width: 30px;
+        height: 20px;
+        margin: 0 auto;
     }
 }
