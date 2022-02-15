@@ -103,10 +103,18 @@ footer{
     align-items: center;
     color:#5C5C5C ;
 }
+
 .menu-icon{
     width: 25px;
     display: none;
 }
+
+#eventos{
+    /*display: none;*/
+}
+
+
+
 
 
 @media (max-width: 770px) {

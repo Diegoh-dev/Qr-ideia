@@ -10,6 +10,7 @@
     <link href="https: //fonts.googleapis.com/css2? family= Roboto:wght@100;300;400;700 & display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
+
     <title>QrIdeia</title>
 </head>
 
@@ -25,10 +26,10 @@
                 <li class="nav-li">
                     <a href="#">Home</a>
                 </li>
-                <li class="nav-li">
+                <li class="nav-li" onclick="eventosOne()">
                     <a href="#">Eventos</a>
                 </li>
-                <li class="nav-li">
+                <li class="nav-li" onclick="menuUsuario()">
                     <a href="#">Usuário</a>
                 </li>
                 <li class="nav-li">
@@ -57,18 +58,20 @@
     <main>
         <p class="msg">Olá <span style="font-weight: bold;">Igor Gonçalves,</span> selecione uma das opções abaixo</p>
 
-        <div class="conteiner-card">
-            <div class="card">
-                <img src="./images/icone-eventos.png" alt="icones eventos">
-                <p>Meus Eventos</p>
+        <div id="conteiner" class="conteiner-card">
+
+            <div id="eventos" class="card">
+                <img id="image-eventos" src="./images/icone-eventos.png" alt="icones eventos">
+                <p id="paragrafo-eventos">Meus Eventos</p>
             </div>
-            <div class="card">
-                <img src="./images/icone-usuarios.png" alt="icones eventos">
-                <p>Meus Eventos</p>
+
+            <div id="usuario-card" class="card">
+                <img id="image-usuario" src="./images/icone-usuarios.png" alt="icones eventos">
+                <p id="paragrafo-usuario">Usuários</p>
             </div>
             <div class="card">
                 <img src="./images/icone-relatorios.png" alt="icones eventos">
-                <p>Meus Eventos</p>
+                <p>Relatórios</p>
             </div>
             <!--card-->
         </div>
@@ -95,17 +98,70 @@
     const usuario = document.getElementById("conteiner-usario")
     usuario.style.maxHeight = "0px"
 
-    function showMenu(){
+    function showMenu() {
         // VERIFICA SE O MENU ESTA FECHADO
-        if(menuList.style.maxHeight == "0px" && usuario.style.maxHeight == "0px"){
+        if (menuList.style.maxHeight == "0px" && usuario.style.maxHeight == "0px") {
             menuList.style.maxHeight = "120px"
             usuario.style.maxHeight = "100px"
-        }else{
+        } else {
             // se tiver aberto, fechar.
             menuList.style.maxHeight = "0px"
             usuario.style.maxHeight = "0px"
         }
     }
+
+    // eventos
+
+    const eventos = document.getElementById("eventos")
+    eventos.style.maxHeight = "0px"
+
+    const imgEventos = document.getElementById("image-eventos")
+    imgEventos.style.maxHeight = "0px"
+
+
+    const pEventos = document.getElementById("paragrafo-eventos")
+    pEventos.style.display = "none"
+
+    function eventosOne() {
+
+        if (eventos.style.maxHeight == "0px" && imgEventos.style.maxHeight == "0px" && pEventos.style.display == "none") {
+
+            eventos.style.maxHeight = "240px"
+            imgEventos.style.maxHeight = "90px"
+            pEventos.style.display = "block"
+
+        } else {
+
+            eventos.style.maxHeight = "0px"
+            imgEventos.style.maxHeight = "0px"
+            pEventos.style.display = "none"
+        }
+    }
+
+
+    // MENU USUÁRIO
+
+    const usuarioCard = document.getElementById("usuario-card")
+    usuarioCard.style.maxHeight = "0px"
+
+    const imgUsuario = document.getElementById("image-usuario")
+    imgUsuario.style.maxHeight = "0px"
+
+    const pUsuario = document.getElementById("paragrafo-usuario")
+    pUsuario.style.display = "none"
+
+    function menuUsuario(){
+        if(usuarioCard.style.maxHeight == "0px" && imgUsuario.style.maxHeight == "0px" && pUsuario.style.display == "none"){
+            usuarioCard.style.maxHeight = "240px"
+            imgUsuario.style.maxHeight = "90px"
+            pUsuario.style.display = "block"
+        }else{
+            usuarioCard.style.maxHeight = "0px"
+            imgUsuario.style.maxHeight = "0px"
+            pUsuario.style.display = "none"
+        }
+    }
+
 </script>
 
 </html>
