@@ -32,7 +32,7 @@
                 <li class="nav-li" onclick="menuUsuario()">
                     <a href="#">Usuário</a>
                 </li>
-                <li class="nav-li">
+                <li class="nav-li" onclick="menuRelatorio()">
                     <a href="#">Relatórios</a>
                 </li>
             </ul>
@@ -69,9 +69,9 @@
                 <img id="image-usuario" src="./images/icone-usuarios.png" alt="icones eventos">
                 <p id="paragrafo-usuario">Usuários</p>
             </div>
-            <div class="card">
-                <img src="./images/icone-relatorios.png" alt="icones eventos">
-                <p>Relatórios</p>
+            <div id="relatorio-card" class="card">
+                <img id="img-relatorio" src="./images/icone-relatorios.png" alt="icones eventos">
+                <p id="paragrafo-relatorio">Relatórios</p>
             </div>
             <!--card-->
         </div>
@@ -110,7 +110,7 @@
         }
     }
 
-    // eventos
+    // MENU EVENTOS
 
     const eventos = document.getElementById("eventos")
     eventos.style.maxHeight = "0px"
@@ -162,6 +162,29 @@
         }
     }
 
+
+    // MENU RELÁTORIOS
+
+const relatorio = document.getElementById("relatorio-card")
+relatorio.style.maxHeight = "0px"
+
+const imgRelatorio = document.getElementById("img-relatorio")
+imgRelatorio.style.maxHeight = "0px"
+
+const pRelatorio = document.getElementById("paragrafo-relatorio")
+pRelatorio.style.display ="none"
+
+const menuRelatorio = () =>{
+    if(relatorio.style.maxHeight == "0px" && imgRelatorio.style.maxHeight == "0px" && pRelatorio.style.display == "none"){
+        relatorio.style.maxHeight = "240px"
+        imgRelatorio.style.maxHeight = "90px"
+        pRelatorio.style.display = "block"
+    }else{
+        relatorio.style.maxHeight = "0px"
+        imgRelatorio.style.maxHeight = "0px"
+        pRelatorio.style.display = "none"
+    }
+}
 </script>
 
 </html>
