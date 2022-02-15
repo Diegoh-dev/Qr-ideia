@@ -21,23 +21,23 @@
         <!--logo-->
 
         <nav>
-            <ul>
-                <li>
+            <ul id="menu-list">
+                <li class="nav-li">
                     <a href="#">Home</a>
                 </li>
-                <li>
+                <li class="nav-li">
                     <a href="#">Eventos</a>
                 </li>
-                <li>
+                <li class="nav-li">
                     <a href="#">Usuário</a>
                 </li>
-                <li>
+                <li class="nav-li">
                     <a href="#">Relatórios</a>
                 </li>
             </ul>
         </nav>
         <!--navegação-->
-        <div class="conteiner-usario">
+        <div id="conteiner-usario">
             <img src="./images/user.png" alt="user">
             <div>
                 <span>Igor Gonçalves</span>
@@ -46,6 +46,7 @@
 
         </div>
         <!--conteiner usario-->
+        <img class="menu-icon" src="./images/menu.png" alt="botao-menu" onclick="showMenu()">
     </header>
     <!--cabeçalho-->
     <div class="conteiner-orange">
@@ -54,8 +55,8 @@
     <!--conteiner-orange-->
 
     <main>
-            <p class="msg">Olá <span style="font-weight: bold;">Igor Gonçalves,</span> selecione uma das opções abaixo</p>
-        
+        <p class="msg">Olá <span style="font-weight: bold;">Igor Gonçalves,</span> selecione uma das opções abaixo</p>
+
         <div class="conteiner-card">
             <div class="card">
                 <img src="./images/icone-eventos.png" alt="icones eventos">
@@ -76,8 +77,35 @@
 
 
     <footer>
-        <p> <span style="color:#F29120 ;">Ideia 2022</span>  &copy; Copyright 2022 - Todos os direitos reservados</p>
+        <p> <span style="color:#F29120 ;">Ideia 2022</span> &copy; Copyright 2022 - Todos os direitos reservados</p>
     </footer>
+
+
+
+
+
+
+
 </body>
+<script>
+    /*FAZ OS ITENS DESAPARECEREM*/
+    const menuList = document.getElementById("menu-list")
+    menuList.style.maxHeight = "0px"
+
+    const usuario = document.getElementById("conteiner-usario")
+    usuario.style.maxHeight = "0px"
+
+    function showMenu(){
+        // VERIFICA SE O MENU ESTA FECHADO
+        if(menuList.style.maxHeight == "0px" && usuario.style.maxHeight == "0px"){
+            menuList.style.maxHeight = "120px"
+            usuario.style.maxHeight = "120px"
+        }else{
+            // se tiver aberto, fechar.
+            menuList.style.maxHeight = "0px"
+            usuario.style.maxHeight = "0px"
+        }
+    }
+</script>
 
 </html>

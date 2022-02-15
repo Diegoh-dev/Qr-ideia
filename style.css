@@ -5,6 +5,7 @@
     font-family: 'Roboto', sans-serif;
     text-decoration: none;
 }
+
 body{
     background-color: #F1F1F1;
     overflow-x: hidden;
@@ -20,7 +21,7 @@ header{
     flex-wrap: wrap;
 }
 
-ul{
+#menu-list{
     display: flex;
     gap: 40px;
     list-style: none;
@@ -86,6 +87,7 @@ main .msg{
     font-weight: bold;
     border-radius:25px;
     border: 1px solid rgb(243, 232, 232);
+    
 }
 
 .card p{
@@ -100,4 +102,35 @@ footer{
     justify-content: center;
     align-items: center;
     color:#5C5C5C ;
+}
+.menu-icon{
+    width: 25px;
+    display: none;
+}
+
+
+@media (max-width: 770px) {
+    #menu-list{
+        display: block;
+        position: relative;
+        top: 200px;
+        left: 260px;
+        overflow: hidden;
+        
+    }
+    #conteiner-usario{
+        position: relative;
+        top: 70px;
+        left: 90px;
+        overflow: hidden;
+       
+    }
+   
+    .menu-icon{
+        display: block;
+    }
+
+    .nav-li{
+        display: block;
+    }
 }
